@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Player Stats</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🏏 Cricket Player Analytics</h1>
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#form">Add Match</a>
+      <a href="#history">Match History</a>
+      <a href="#strengths">Insights</a>
+      <a href="#progress">Progress</a>
+    </nav>
+  </header>
+
+  <!-- Dashboard -->
+  <section id="dashboard">
+    <h2>Dashboard</h2>
+    <div class="card">
+      <h3>Overall Performance</h3>
+      <p>Player Name: <span id="playerName">Not Set</span></p>
+      <p>Total Matches: <span id="matches">0</span></p>
+      <p>Total Runs: <span id="runs">0</span></p>
+      <p>Average: <span id="average">0</span></p>
+      <p>Strike Rate: <span id="strikeRate">0</span></p>
+    </div>
+  </section>
+
+  <!-- Add Match Form -->
+  <section id="form">
+    <h2>Add Match Stats</h2>
+    <div class="card">
+      <form id="matchForm">
+        <label>Player Name: <input type="text" id="nameInput" required></label><br><br>
+        <label>Runs: <input type="number" id="runsInput" required></label><br><br>
+        <label>Balls: <input type="number" id="ballsInput" required></label><br><br>
+        <label>Dismissal:
+          <select id="dismissalInput">
+            <option>Not Out</option>
+            <option>Bowled</option>
+            <option>LBW</option>
+            <option>Caught</option>
+            <option>Run Out</option>
+            <option>Bouncer</option>
+          </select>
+        </label><br><br>
+        <button type="submit">Add Match</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Match History -->
+  <section id="history">
+    <h2>Match History</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Match</th>
+          <th>Runs</th>
+          <th>Balls</th>
+          <th>Strike Rate</th>
+          <th>Dismissal</th>
+        </tr>
+      </thead>
+      <tbody id="matchHistory"></tbody>
+    </table>
+  </section>
+
+  <!-- Strengths & Weaknesses -->
+  <section id="strengths">
+    <h2>Insights</h2>
+    <div class="card strengths">
+      <h3>Strengths</h3>
+      <ul id="strengthList"></ul>
+    </div>
+    <div class="card weaknesses">
+      <h3>Weaknesses</h3>
+      <ul id="weaknessList"></ul>
+    </div>
+  </section>
+
+  <!-- Weekly Progress -->
+  <section id="progress">
+    <h2>Weekly Progress</h2>
+    <canvas id="progressChart"></canvas>
+  </section>
+
+  <footer>
+    <p>© 2025 Cricket Analytics | Built with ❤️</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
